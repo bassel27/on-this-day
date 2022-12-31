@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
-class SwipeableQuoteCard extends StatelessWidget {
+class SwipeableInfoCard extends StatelessWidget {
   final String _information;
 
-  SwipeableQuoteCard(this._information);
+  SwipeableInfoCard(this._information);
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(15),
         color: Colors.white,
-        border: Border.all(color: Colors.grey, width: 2),
+        border: Border.all(color: Color(0XFFBDBDBD), width: 3),
         boxShadow: [
           BoxShadow(
-            color: Color.fromARGB(255, 118, 113, 113),
+            color: Color(0xFF757575),
             blurRadius: 4,
-            offset: Offset(2, 2), // Shadow position
+            offset: Offset(0, 0), // Shadow position
           ),
         ],
       ),

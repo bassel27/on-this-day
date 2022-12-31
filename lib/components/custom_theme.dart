@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'constants.dart';
+import '../constants.dart';
 
 class CustomTheme {
   static ThemeData get lightTheme {
@@ -8,10 +8,10 @@ class CustomTheme {
       primaryColor: Colors.purple,
       scaffoldBackgroundColor: Colors.white,
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          enableFeedback: true,
           backgroundColor: Color(darkRed),
-          selectedItemColor: Colors.black,
-          unselectedItemColor: Colors.white),
-      fontFamily: 'Montserrat',
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Color(pink)),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(primary: Colors.green),
       ),

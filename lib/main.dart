@@ -1,37 +1,68 @@
 import 'package:flutter/material.dart';
-import './custom_theme.dart';
+import 'components/custom_theme.dart';
 import 'components/my_bottom_navigation_bar.dart';
 import 'components/info_cards_stack.dart';
+import './constants.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget {
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
 // the underscore turns this class into a private class that can be only used
 //inside this file
-class _MyAppState extends State<MyApp> {
+class MyApp extends StatelessWidget {
   // state of MyApp class
   //setState calls the build method
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: CustomTheme.lightTheme,
-      home: Scaffold(
-          appBar: AppBar(
-            title: Text("On this Day"),
-          ),
-          body: Column(
-            children: [
-              Expanded(child: InfoCardsStack(["Info goes here", "afd"])),
-              Align(
-                alignment: FractionalOffset.bottomCenter,
-                child: MyBottomNavigationBar(),
+      home: DefaultTabController(
+        length: 3,
+        child: Scaffold(
+            appBar: AppBar(
+              bottom: TabBar(tabs: <Tab>[
+                Tab(text: "Births"),
+                Tab(text: "Events"),
+                Tab(text: "Deaths"),
+              ]),
+              title: Text("On this Day"),
+            ),
+            body: TabBarView(children: [
+              Column(
+                children: [
+                  SizedBox(height: 5),
+                  Expanded(child: InfoCardsStack(["Info goes here", "afd"])),
+                  SizedBox(height: 10),
+                  Align(
+                    alignment: FractionalOffset.bottomCenter,
+                    child: MyBottomNavigationBar(),
+                  ),
+                ],
               ),
-            ],
-          )),
+              Column(
+                children: [
+                  SizedBox(height: 5),
+                  Expanded(child: InfoCardsStack(["Info goes here", "afd"])),
+                  SizedBox(height: 10),
+                  Align(
+                    alignment: FractionalOffset.bottomCenter,
+                    child: MyBottomNavigationBar(),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  SizedBox(height: 5),
+                  Expanded(child: InfoCardsStack(["Info goes here", "afd"])),
+                  SizedBox(height: 10),
+                  Align(
+                    alignment: FractionalOffset.bottomCenter,
+                    child: MyBottomNavigationBar(),
+                  ),
+                ],
+              ),
+            ])),
+      ),
     );
   }
 }
