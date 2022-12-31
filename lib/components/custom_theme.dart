@@ -12,9 +12,6 @@ class CustomTheme {
           backgroundColor: Color(darkRed),
           selectedItemColor: Colors.white,
           unselectedItemColor: Color(pink)),
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(primary: Colors.green),
-      ),
     );
   }
 

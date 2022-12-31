@@ -4,6 +4,7 @@ import 'components/my_bottom_navigation_bar.dart';
 import 'components/info_cards_stack.dart';
 import './constants.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+import 'screens/login_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,7 +28,8 @@ class MyApp extends StatelessWidget {
               ]),
               title: Text("On this Day"),
             ),
-            body: TabBarView(children: [
+            body:
+                TabBarView(physics: NeverScrollableScrollPhysics(), children: [
               Column(
                 children: [
                   SizedBox(height: 5),
