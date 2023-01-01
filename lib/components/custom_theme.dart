@@ -4,14 +4,12 @@ import '../constants.dart';
 class CustomTheme {
   static ThemeData get lightTheme {
     return ThemeData(
-      appBarTheme: AppBarTheme(backgroundColor: Color(darkRed)),
-      primaryColor: Colors.purple,
+      appBarTheme: AppBarTheme(backgroundColor: kAppBarColor),
+      tabBarTheme: TabBarTheme(
+        unselectedLabelColor: kUnselectedLabelColor,
+        labelColor: kSelectedLabelColor,
+      ),
       scaffoldBackgroundColor: Colors.white,
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          enableFeedback: true,
-          backgroundColor: Color(darkRed),
-          selectedItemColor: Colors.white,
-          unselectedItemColor: Color(pink)),
     );
   }
 

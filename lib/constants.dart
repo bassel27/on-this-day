@@ -1,4 +1,20 @@
-var darkRed = 0xFFD32F2F;
-var lightGrey = 0xFFBDBDBD;
-var grey = 0xFF757575;
-var pink = 0xFFFFCDD2;
+import 'package:flutter/material.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+
+const Color kDarkRedColor = Color(0xFFD32F2F);
+const Color kLightGreyColor = Color(0xFFBDBDBD);
+const Color kGreyColor = Color(0xFF757575);
+const Color kPinkColor = Color(0xFFFFCDD2);
+const Color kRedColor = Color(0xFFF44336);
+const Color kAppBarColor = kDarkRedColor;
+const Color kTabBarColor = kDarkRedColor;
+const Color kTabBarIndicatorColor = kSelectedLabelColor;
+const Color kNavBarColor = kDarkRedColor;
+const Color kUnselectedLabelColor = kPinkColor;
+const Color kSelectedLabelColor = Colors.white;
+NavBarDecoration kNavBarDecoration = NavBarDecoration(
+  border: Border.all(color: Color.fromARGB(255, 187, 7, 7), width: 3),
+  borderRadius: BorderRadius.only(
+      topLeft: Radius.circular(30), topRight: Radius.circular(30)),
+  colorBehindNavBar: Color.fromARGB(255, 0, 0, 0),
+);
