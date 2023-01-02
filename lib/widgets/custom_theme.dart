@@ -4,10 +4,22 @@ import '../constants.dart';
 class CustomTheme {
   static ThemeData get lightTheme {
     return ThemeData(
-      appBarTheme: AppBarTheme(backgroundColor: kAppBarColor),
+      fontFamily: 'Mulish-Italic-VariableFont_wght',
+      primarySwatch: Colors
+          .red, // some flutter widgets use shades o a color, this makes the shades available
+      textTheme: TextTheme(
+        bodyText2: TextStyle(fontWeight: FontWeight.w500), // affects card text
+      ),
+      appBarTheme: AppBarTheme(
+        backgroundColor: kAppBarColor,
+        titleTextStyle: TextStyle(
+            fontSize: 25, letterSpacing: 0.5, fontWeight: FontWeight.w600),
+      ),
       tabBarTheme: TabBarTheme(
         unselectedLabelColor: kUnselectedLabelColor,
         labelColor: kSelectedLabelColor,
+        labelStyle: TextStyle(
+            fontWeight: FontWeight.w500, fontSize: 17, letterSpacing: 0.5),
       ),
       scaffoldBackgroundColor: Colors.white,
     );

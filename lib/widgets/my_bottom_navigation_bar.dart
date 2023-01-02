@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:on_this_day/screens/home_screen.dart';
+import 'package:on_this_day/screens/info_display_screen.dart';
 import '../constants.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import '../screens/settings_screen.dart';
@@ -51,8 +51,11 @@ class MyBottomNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).primaryColorDark,
         elevation: 0,
-        title: Text("On this Day"),
+        title: Text(
+          "On this Day",
+        ),
       ),
       body: PersistentTabView(
         context,
@@ -60,7 +63,8 @@ class MyBottomNavigationBar extends StatelessWidget {
         screens: _buildScreens(),
         items: _navBarsItems(),
         confineInSafeArea: true,
-        backgroundColor: kNavBarColor, // Default is Colors.white.
+        backgroundColor:
+            Theme.of(context).primaryColorDark, // Default is Colors.white.
         decoration: kNavBarDecoration,
         popAllScreensOnTapOfSelectedTab: true,
         popActionScreens: PopActionScreensType.all,

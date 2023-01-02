@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:on_this_day/components/my_bottom_navigation_bar.dart';
+import 'package:on_this_day/widgets/my_bottom_navigation_bar.dart';
 import 'package:on_this_day/constants.dart';
-import '../components/info_cards_stack.dart';
+import '../widgets/info_cards_stack.dart';
 
 class InfoDisplayScreen extends StatelessWidget {
   @override
@@ -12,7 +12,7 @@ class InfoDisplayScreen extends StatelessWidget {
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(200.0),
           child: Container(
-            color: kTabBarColor,
+            color: Theme.of(context).primaryColorDark,
             child: TabBar(
               indicatorColor: kTabBarIndicatorColor,
               tabs: <Tab>[

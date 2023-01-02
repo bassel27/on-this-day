@@ -4,6 +4,9 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class LoginScreen extends StatelessWidget {
+  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,10 +19,20 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextField(decoration: InputDecoration(labelText: "Username")),
-              TextField(decoration: InputDecoration(labelText: "Password")),
+              TextField(
+                decoration: InputDecoration(labelText: "Username"),
+                controller: _usernameController,
+                keyboardType: TextInputType.emailAddress,
+              ),
+              TextField(
+                decoration: InputDecoration(labelText: "Password"),
+                controller: _passwordController,
+              ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  print(_usernameController.text);
+                  print(_passwordController.text);
+                },
                 child: Text("Login"),
               ),
             ],
