@@ -3,19 +3,14 @@ import 'package:on_this_day/screens/info_display_screen.dart';
 import '../constants.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import '../screens/settings_screen.dart';
-import '../screens/historical_calendar_screen.dart';
+import 'my_app_bar.dart';
 
 class MyBottomNavigationBar extends StatelessWidget {
   final PersistentTabController _controller =
       PersistentTabController(initialIndex: 0);
 
   List<Widget> _buildScreens() {
-    return [
-      InfoDisplayScreen(),
-      InfoDisplayScreen(),
-      HistoricalCalendarScreen(),
-      SettingsScreen()
-    ];
+    return [InfoDisplayScreen(), InfoDisplayScreen(), SettingsScreen()];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems() {
@@ -33,12 +28,6 @@ class MyBottomNavigationBar extends StatelessWidget {
         inactiveColorPrimary: kUnselectedLabelColor,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.calendar_month),
-        title: ("Calendar"),
-        activeColorPrimary: kSelectedLabelColor,
-        inactiveColorPrimary: kUnselectedLabelColor,
-      ),
-      PersistentBottomNavBarItem(
         icon: Icon(Icons.settings),
         title: ("Settings"),
         activeColorPrimary: kSelectedLabelColor,
@@ -50,13 +39,7 @@ class MyBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).primaryColorDark,
-        elevation: 0,
-        title: Text(
-          "On this Day",
-        ),
-      ),
+      appBar: MyAppBar(),
       body: PersistentTabView(
         context,
         controller: _controller,

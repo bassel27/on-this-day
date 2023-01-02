@@ -37,6 +37,7 @@ dependencies:
   appinio_swiper: ^1.1.1
   persistent_bottom_nav_bar: ^5.0.2
   google_fonts: ^3.0.1
+  flutter_date_pickers: ^0.4.0
 
 dev_dependencies:
   flutter_test:

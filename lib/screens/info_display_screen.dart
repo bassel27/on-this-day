@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:on_this_day/widgets/my_bottom_navigation_bar.dart';
 import 'package:on_this_day/constants.dart';
 import '../widgets/info_cards_stack.dart';
 
@@ -26,30 +25,9 @@ class InfoDisplayScreen extends StatelessWidget {
         body: TabBarView(
           physics: NeverScrollableScrollPhysics(),
           children: [
-            Column(
-              children: [
-                Expanded(
-                  child: InfoCardsStack(["Birth1", "Birth2"]),
-                ),
-                SizedBox(height: 30),
-              ],
-            ),
-            Column(
-              children: [
-                Expanded(
-                  child: InfoCardsStack(["Event1", "Event2"]),
-                ),
-                SizedBox(height: 30),
-              ],
-            ),
-            Column(
-              children: [
-                Expanded(
-                  child: InfoCardsStack(["Death1", "Death2"]),
-                ),
-                SizedBox(height: 30),
-              ],
-            ),
+            InfoCardsStack(["Birth1", "Birth2"]),
+            InfoCardsStack(["Event1", "Event2"]),
+            InfoCardsStack(["Death1", "Death2"]),
           ],
         ),
       ),

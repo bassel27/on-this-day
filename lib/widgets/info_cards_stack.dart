@@ -17,12 +17,18 @@ class InfoCardsStack extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppinioSwiper(
-      maxAngle: 45,
-      
-      padding: EdgeInsets.fromLTRB(6, 6, 6, 15),
-      cards: _swipeableCards,
-      duration: Duration(milliseconds: 150),
+    return Column(
+      children: [
+        Expanded(
+          child: AppinioSwiper(
+            maxAngle: 45,
+            padding: EdgeInsets.fromLTRB(6, 6, 6, 15),
+            cards: _swipeableCards,
+            duration: Duration(milliseconds: 150),
+          ),
+        ),
+        Container(height: 40),
+      ],
     );
   }
 }
