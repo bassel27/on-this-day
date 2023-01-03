@@ -32,10 +32,10 @@ BoxDecoration kCalendarContainerDecoration = BoxDecoration(
 );
 
 TextStyle kCalendarMonthsTextStyle =
-    TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w500);
+    TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w700);
 
 var kDatePickerStyles = DatePickerStyles(
-  displayedPeriodTitle: kCalendarMonthsTextStyle,
+  displayedPeriodTitle: kCalendarMonthsTextStyle.copyWith(fontSize: 18),
   currentDateStyle: kCalendarMonthsTextStyle,
   selectedDateStyle: kCalendarMonthsTextStyle.copyWith(color: Colors.black),
   defaultDateTextStyle: kCalendarMonthsTextStyle,
