@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:on_this_day/widgets/alert_dialog.dart';
+import 'package:on_this_day/widgets/my_alert_dialog.dart';
 
 class MyAppBar extends StatelessWidget with PreferredSizeWidget {
   Size get preferredSize => Size.fromHeight(kToolbarHeight);
