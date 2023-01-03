@@ -9,11 +9,14 @@ class CustomTheme {
           .red, // some flutter widgets use shades o a color, this makes the shades available
       textTheme: TextTheme(
         bodyText2: TextStyle(fontWeight: FontWeight.w500), // affects card text
+        headline6: TextStyle(
+            color: Colors.white,
+            fontSize: 25,
+            letterSpacing: 0.5,
+            fontWeight: FontWeight.w600),
       ),
       appBarTheme: AppBarTheme(
         backgroundColor: kAppBarColor,
-        titleTextStyle: TextStyle(
-            fontSize: 25, letterSpacing: 0.5, fontWeight: FontWeight.w600),
       ),
       tabBarTheme: TabBarTheme(
         unselectedLabelColor: kUnselectedLabelColor,
