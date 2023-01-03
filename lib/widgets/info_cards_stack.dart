@@ -27,7 +27,9 @@ class InfoCardsStack extends StatelessWidget {
             duration: Duration(milliseconds: 150),
           ),
         ),
-        Container(height: 40),
+        SizedBox(
+            height:
+                kBottomNavigationBarHeight - kBottomNavigationBarHeight * 0.2),
       ],
     );
   }

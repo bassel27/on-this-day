@@ -3,6 +3,7 @@ import 'package:on_this_day/widgets/month_calendar.dart';
 import '../providers/selected_date.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
+import 'package:on_this_day/constants.dart';
 
 class MyAppBar extends StatelessWidget with PreferredSizeWidget {
   Size get preferredSize => Size.fromHeight(kToolbarHeight);
@@ -34,7 +35,14 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
             showDialog(
                 context: context,
                 builder: (BuildContext context) {
-                  return MonthCalendar();
+                  return AlertDialog(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(kCalendarBorderRadius),
+                        ),
+                      ),
+                      contentPadding: EdgeInsets.zero,
+                      content: MonthCalendar());
                 });
           },
           icon: Icon(Icons.calendar_month),
