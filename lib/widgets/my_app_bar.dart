@@ -4,6 +4,7 @@ import '../providers/selected_date.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 import 'package:on_this_day/constants.dart';
+import 'calendar_icon_button.dart';
 
 class MyAppBar extends StatelessWidget with PreferredSizeWidget {
   Size get preferredSize => Size.fromHeight(kToolbarHeight);
@@ -30,23 +31,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
         ),
       ),
       actions: [
-        IconButton(
-          onPressed: () {
-            showDialog(
-                context: context,
-                builder: (BuildContext context) {
-                  return AlertDialog(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(kCalendarBorderRadius),
-                        ),
-                      ),
-                      contentPadding: EdgeInsets.zero,
-                      content: dialogContent());
-                });
-          },
-          icon: Icon(Icons.calendar_month),
-        ),
+        CalendarIconButton(),
       ],
     );
   }

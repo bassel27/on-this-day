@@ -74,8 +74,14 @@ DatePickerRangeStyles kDatePickerRangeStyles = DatePickerRangeStyles(
   ),
   selectedSingleDateDecoration: BoxDecoration(
     color: Colors.white,
-    borderRadius: BorderRadius.all(
-      Radius.circular(15),
-    ),
+    shape: BoxShape.circle,
+    // borderRadius: BorderRadius.all(
+    //   Radius.circular(30),
+    // ),
   ),
+);
+
+const DatePickerLayoutSettings kDatePickerLayoutSettings =
+    DatePickerLayoutSettings(
+  dayPickerRowHeight: 33,
 );

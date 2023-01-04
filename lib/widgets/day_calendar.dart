@@ -5,18 +5,30 @@ import 'package:provider/provider.dart';
 import 'package:on_this_day/constants.dart';
 import 'package:on_this_day/constants.dart';
 
-class DayCalendar extends StatelessWidget {
+class DayCalendar extends StatefulWidget {
+  @override
+  State<DayCalendar> createState() => _DayCalendarState();
+}
+
+class _DayCalendarState extends State<DayCalendar> {
+  void onDayChange(DateTime pickedDate) {
+    setState(
+      () {
+        context.read<SelectedDate>().day = pickedDate;
+      },
+    );
+    print(context.watch<SelectedDate>().selectedDate);
+  }
+
   @override
   Widget build(BuildContext context) {
     return DayPicker.single(
       datePickerStyles: kDatePickerRangeStyles,
-      datePickerLayoutSettings: DatePickerLayoutSettings(
-        dayPickerRowHeight: 33,
-      ),
-      selectedDate: DateTime.now(),
-      onChanged: (pickedDate) {},
+      datePickerLayoutSettings: kDatePickerLayoutSettings,
+      selectedDate: context.watch<SelectedDate>().selectedDate,
+      onChanged: onDayChange,
       firstDate: DateTime(DateTime.now().year, 1),
-      lastDate: DateTime(DateTime.now().year, 12),
+      lastDate: DateTime(DateTime.now().year, 12, 31),
     );
   }
 }

@@ -22,9 +22,7 @@ class _MonthCalendarState extends State<MonthCalendar> {
   Widget build(BuildContext context) {
     return MonthPicker.single(
       datePickerStyles: kDatePickerStyles,
-      datePickerLayoutSettings: DatePickerLayoutSettings(
-        dayPickerRowHeight: 33,
-      ),
+      datePickerLayoutSettings: kDatePickerLayoutSettings,
       selectedDate: context.watch<SelectedDate>().selectedDate,
       onChanged: onMonthChange,
       firstDate: DateTime(DateTime.now().year, 1),

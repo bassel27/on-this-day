@@ -9,4 +9,10 @@ class SelectedDate with ChangeNotifier {
     _selectedDate = newDate;
     notifyListeners();
   }
+
+  void set day(newDateTime) {
+    _selectedDate =
+        DateTime.utc(_selectedDate.year, _selectedDate.month, newDateTime.day);
+    notifyListeners();
+  }
 }
