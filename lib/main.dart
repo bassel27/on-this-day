@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:on_this_day/widgets/month_calendar.dart';
+import 'package:on_this_day/widgets/dialog_content.dart';
 import 'package:provider/provider.dart';
 import 'widgets/custom_theme.dart';
 import 'widgets/my_bottom_navigation_bar.dart';

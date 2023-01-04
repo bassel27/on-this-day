@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:on_this_day/widgets/month_calendar.dart';
+import 'package:on_this_day/widgets/dialog_content.dart';
 import '../providers/selected_date.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
@@ -42,7 +42,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
                         ),
                       ),
                       contentPadding: EdgeInsets.zero,
-                      content: MonthCalendar());
+                      content: dialogContent());
                 });
           },
           icon: Icon(Icons.calendar_month),
