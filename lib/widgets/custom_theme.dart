@@ -8,7 +8,10 @@ class CustomTheme {
       primarySwatch: Colors
           .red, // some flutter widgets use shades o a color, this makes the shades available
       textTheme: TextTheme(
-        bodyText2: TextStyle(fontWeight: FontWeight.w500), // affects card text
+        bodyText2: TextStyle(fontWeight: FontWeight.w500),
+        button: TextStyle(
+            fontWeight: FontWeight.w700,
+            color: Colors.red), // affects card text
         headline6: TextStyle(
             color: Colors.white,
             fontSize: 25,

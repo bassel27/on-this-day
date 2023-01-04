@@ -22,6 +22,7 @@ NavBarDecoration kNavBarDecoration = NavBarDecoration(
 const double kCalendarBorderRadius = 30;
 
 BoxDecoration kCalendarContainerDecoration = BoxDecoration(
+  
   borderRadius: BorderRadius.all(
     Radius.circular(kCalendarBorderRadius),
   ),
@@ -37,7 +38,7 @@ TextStyle kCalendarMonthsTextStyle =
 var kDatePickerStyles = DatePickerStyles(
   displayedPeriodTitle: kCalendarMonthsTextStyle.copyWith(fontSize: 18),
   currentDateStyle: kCalendarMonthsTextStyle,
-  selectedDateStyle: kCalendarMonthsTextStyle.copyWith(color: Colors.black),
+  selectedDateStyle: kCalendarMonthsTextStyle.copyWith(color: Colors.red),
   defaultDateTextStyle: kCalendarMonthsTextStyle,
   nextIcon: Icon(
     Icons.join_right,
