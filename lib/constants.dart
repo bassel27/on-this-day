@@ -22,7 +22,6 @@ NavBarDecoration kNavBarDecoration = NavBarDecoration(
 const double kCalendarBorderRadius = 30;
 
 BoxDecoration kCalendarContainerDecoration = BoxDecoration(
-  
   borderRadius: BorderRadius.all(
     Radius.circular(kCalendarBorderRadius),
   ),
@@ -32,14 +31,39 @@ BoxDecoration kCalendarContainerDecoration = BoxDecoration(
   ),
 );
 
-TextStyle kCalendarMonthsTextStyle =
+TextStyle kCalendarElementsTextStyle =
     TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w700);
 
 var kDatePickerStyles = DatePickerStyles(
-  displayedPeriodTitle: kCalendarMonthsTextStyle.copyWith(fontSize: 18),
-  currentDateStyle: kCalendarMonthsTextStyle,
-  selectedDateStyle: kCalendarMonthsTextStyle.copyWith(color: Colors.red),
-  defaultDateTextStyle: kCalendarMonthsTextStyle,
+  displayedPeriodTitle: kCalendarElementsTextStyle.copyWith(fontSize: 18),
+  currentDateStyle: kCalendarElementsTextStyle,
+  selectedDateStyle: kCalendarElementsTextStyle.copyWith(color: Colors.red),
+  defaultDateTextStyle: kCalendarElementsTextStyle,
+  nextIcon: Icon(
+    Icons.join_right,
+    color: kDarkRedColor,
+  ),
+  prevIcon: Icon(
+    Icons.join_right,
+    color: kDarkRedColor,
+  ),
+  selectedSingleDateDecoration: BoxDecoration(
+    color: Colors.white,
+    borderRadius: BorderRadius.all(
+      Radius.circular(15),
+    ),
+  ),
+);
+
+DatePickerRangeStyles kDatePickerRangeStyles = DatePickerRangeStyles(
+  displayedPeriodTitle: kCalendarElementsTextStyle.copyWith(fontSize: 18),
+  dayHeaderStyle: DayHeaderStyle(
+    textStyle: kCalendarElementsTextStyle.copyWith(
+        fontWeight: FontWeight.w300, fontSize: 14),
+  ),
+  currentDateStyle: kCalendarElementsTextStyle,
+  selectedDateStyle: kCalendarElementsTextStyle.copyWith(color: Colors.red),
+  defaultDateTextStyle: kCalendarElementsTextStyle,
   nextIcon: Icon(
     Icons.join_right,
     color: kDarkRedColor,
