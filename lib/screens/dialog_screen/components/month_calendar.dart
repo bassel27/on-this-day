@@ -18,16 +18,29 @@ class _MonthCalendarState extends State<MonthCalendar> {
     );
   }
 
+  int getMaxDayPickerRowCount(screenHeight) {
+    if (screenHeight > 400) {
+      return 5;
+    } else if (screenHeight > 300) {
+      return 3;
+    } else if (screenHeight > 250) {
+      return 2;
+    } else {
+      return 1;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return MonthPicker.single(
-      
-      datePickerStyles: kDatePickerStyles,
-      datePickerLayoutSettings: kDatePickerLayoutSettings,
-      selectedDate: context.watch<SelectedDate>().probableDate,
-      onChanged: onMonthChange,
-      firstDate: DateTime(DateTime.now().year, 1),
-      lastDate: DateTime(DateTime.now().year, 12),
+    return FittedBox(
+      child: MonthPicker.single(
+        datePickerStyles: kDatePickerStyles,
+        datePickerLayoutSettings: kDatePickerLayoutSettings,
+        selectedDate: context.watch<SelectedDate>().probableDate,
+        onChanged: onMonthChange,
+        firstDate: DateTime(DateTime.now().year, 1),
+        lastDate: DateTime(DateTime.now().year, 12, 31),
+      ),
     );
   }
 }

@@ -34,7 +34,7 @@ final BoxDecoration kCalendarContainerDecoration = BoxDecoration(
 const TextStyle kCalendarElementsTextStyle = const TextStyle(
     color: Colors.white, fontSize: 16, fontWeight: FontWeight.w700);
 
-var kDatePickerStyles = DatePickerStyles(
+final DatePickerStyles kDatePickerStyles = DatePickerStyles(
   displayedPeriodTitle: kCalendarElementsTextStyle.copyWith(fontSize: 18),
   currentDateStyle: kCalendarElementsTextStyle,
   selectedDateStyle: kCalendarElementsTextStyle.copyWith(color: Colors.red),
@@ -55,7 +55,7 @@ var kDatePickerStyles = DatePickerStyles(
   ),
 );
 
-DatePickerRangeStyles kDatePickerRangeStyles = DatePickerRangeStyles(
+final DatePickerRangeStyles kDatePickerRangeStyles = DatePickerRangeStyles(
   displayedPeriodTitle: kCalendarElementsTextStyle.copyWith(fontSize: 18),
   dayHeaderStyle: DayHeaderStyle(
     textStyle: kCalendarElementsTextStyle.copyWith(
@@ -79,9 +79,9 @@ DatePickerRangeStyles kDatePickerRangeStyles = DatePickerRangeStyles(
 );
 
 const DatePickerLayoutSettings kDatePickerLayoutSettings =
-//TODO: dynamically set calendar for landscape mode
     DatePickerLayoutSettings(
-  maxDayPickerRowCount: 5, //controls calendar height
-  monthPickerPortraitWidth: 280,
-  dayPickerRowHeight: 33,
+  scrollPhysics: NeverScrollableScrollPhysics(),
+  dayPickerRowHeight: 35,
 );
+
+var kScreenHeightToMaxDayPickerRowCount = {1440: 5};

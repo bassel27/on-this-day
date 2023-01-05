@@ -14,6 +14,7 @@ class dialogContent extends StatefulWidget {
 }
 
 class _dialogContentState extends State<dialogContent> {
+  ScrollController _scrollController = ScrollController();
   bool _isMonthVisible = true;
   void closeDialog() {
     Navigator.pop(context);
@@ -22,38 +23,42 @@ class _dialogContentState extends State<dialogContent> {
   @override
   Widget build(BuildContext context) {
     return CalendarContainer(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          _isMonthVisible ? MonthCalendar() : DayCalendar(),
-          // TODO: seperate this widget in its own file and use provider to keep track of _isMonthVisible
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              CalendarButton(
-                onPressed: closeDialog,
-                child: const Text(
-                  "Cancel",
+      child: SingleChildScrollView(
+        controller: _scrollController,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            _isMonthVisible ? MonthCalendar() : DayCalendar(),
+            // TODO: seperate this widget in its own file and use provider to keep track of _isMonthVisible
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                CalendarButton(
+                  onPressed: closeDialog,
+                  child: const Text(
+                    "Cancel",
+                  ),
                 ),
-              ),
-              CalendarButton(
-                child: const Text(
-                  "Ok",
+                CalendarButton(
+                  child: const Text(
+                    "Ok",
+                  ),
+                  onPressed: () {
+                    if (_isMonthVisible) {
+                      setState(() {
+                        _scrollController.jumpTo(0);
+                        _isMonthVisible = false;
+                      });
+                    } else {
+                      context.read<SelectedDate>().updateAppBar();
+                      closeDialog();
+                    }
+                  },
                 ),
-                onPressed: () {
-                  if (_isMonthVisible) {
-                    setState(() {
-                      _isMonthVisible = false;
-                    });
-                  } else {
-                    context.read<SelectedDate>().updateAppBar();
-                    closeDialog();
-                  }
-                },
-              ),
-            ],
-          ),
-        ],
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -46,7 +46,9 @@ class MyBottomNavigationBar extends StatelessWidget {
       appBar: MyAppBar(),
       body: PersistentTabView(
         context,
-        navBarHeight: MediaQuery.of(context).size.height * 0.077,
+        navBarHeight: MediaQuery.of(context).orientation == Orientation.portrait
+            ? MediaQuery.of(context).size.height * 0.077
+            : kBottomNavigationBarHeight,
         controller: _controller,
         screens: _buildScreens(),
         items: _navBarsItems(),
