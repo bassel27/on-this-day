@@ -81,5 +81,8 @@ DatePickerRangeStyles kDatePickerRangeStyles = DatePickerRangeStyles(
 const DatePickerLayoutSettings kDatePickerLayoutSettings =
 //TODO: dynamically set calendar for landscape mode
     DatePickerLayoutSettings(
+      
+  maxDayPickerRowCount: 5, //controls calendar height
+  monthPickerPortraitWidth: 280,
   dayPickerRowHeight: 33,
 );
