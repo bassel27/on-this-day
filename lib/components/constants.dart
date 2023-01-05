@@ -9,10 +9,10 @@ const Color kPinkColor = Color(0xFFFFCDD2);
 const Color kRedColor = Color(0xFFF44336);
 const Color kAppBarColor = kDarkRedColor;
 const Color kTabBarColor = kDarkRedColor;
-const Color kTabBarIndicatorColor = kSelectedLabelColor;
+const Color kTabBarIndicatorColor = kActiveLabelColor;
 const Color kNavBarColor = kDarkRedColor;
-const Color kUnselectedLabelColor = kPinkColor;
-const Color kSelectedLabelColor = Colors.white;
+const Color kInactiveLabelColor = kPinkColor;
+const Color kActiveLabelColor = Colors.white;
 NavBarDecoration kNavBarDecoration = NavBarDecoration(
   border: Border.all(color: const Color.fromARGB(255, 187, 7, 7), width: 3),
   borderRadius: const BorderRadius.only(
@@ -81,7 +81,6 @@ DatePickerRangeStyles kDatePickerRangeStyles = DatePickerRangeStyles(
 const DatePickerLayoutSettings kDatePickerLayoutSettings =
 //TODO: dynamically set calendar for landscape mode
     DatePickerLayoutSettings(
-      
   maxDayPickerRowCount: 5, //controls calendar height
   monthPickerPortraitWidth: 280,
   dayPickerRowHeight: 33,

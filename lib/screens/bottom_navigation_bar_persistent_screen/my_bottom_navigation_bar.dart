@@ -7,7 +7,7 @@ import 'components/my_app_bar.dart';
 
 class MyBottomNavigationBar extends StatelessWidget {
   final PersistentTabController _controller =
-      PersistentTabController(initialIndex: 0);
+      PersistentTabController(initialIndex: 1);
 
   List<Widget> _buildScreens() {
     return [InfoDisplayScreen(), InfoDisplayScreen(), SettingsScreen()];
@@ -16,22 +16,26 @@ class MyBottomNavigationBar extends StatelessWidget {
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.home),
-        title: ("Home"),
-        activeColorPrimary: kSelectedLabelColor,
-        inactiveColorPrimary: kUnselectedLabelColor,
+        icon: const Icon(Icons.favorite),
+        activeColorPrimary: kActiveLabelColor,
+        inactiveColorPrimary: kInactiveLabelColor,
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.favorite),
-        title: ("Favorites"),
-        activeColorPrimary: kSelectedLabelColor,
-        inactiveColorPrimary: kUnselectedLabelColor,
-      ),
+          icon: const Icon(
+            Icons.home,
+            color: kActiveLabelColor,
+          ),
+          inactiveIcon: const Icon(
+            Icons.home,
+            color: kInactiveLabelColor,
+          ),
+          activeColorPrimary: kActiveLabelColor,
+          inactiveColorPrimary: kInactiveLabelColor,
+          activeColorSecondary: Colors.amber),
       PersistentBottomNavBarItem(
         icon: const Icon(Icons.settings),
-        title: ("Settings"),
-        activeColorPrimary: kSelectedLabelColor,
-        inactiveColorPrimary: kUnselectedLabelColor,
+        activeColorPrimary: kActiveLabelColor,
+        inactiveColorPrimary: kInactiveLabelColor,
       ),
     ];
   }
@@ -42,6 +46,7 @@ class MyBottomNavigationBar extends StatelessWidget {
       appBar: MyAppBar(),
       body: PersistentTabView(
         context,
+        navBarHeight: MediaQuery.of(context).size.height * 0.077,
         controller: _controller,
         screens: _buildScreens(),
         items: _navBarsItems(),
@@ -63,7 +68,7 @@ class MyBottomNavigationBar extends StatelessWidget {
           duration: Duration(milliseconds: 200),
         ),
         navBarStyle:
-            NavBarStyle.style6, // Choose the nav bar style with this property.
+            NavBarStyle.style1, // Choose the nav bar style with this property.
       ),
     );
   }

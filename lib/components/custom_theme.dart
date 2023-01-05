@@ -22,8 +22,8 @@ class CustomTheme {
         backgroundColor: kAppBarColor,
       ),
       tabBarTheme: const TabBarTheme(
-        unselectedLabelColor: kUnselectedLabelColor,
-        labelColor: kSelectedLabelColor,
+        unselectedLabelColor: kInactiveLabelColor,
+        labelColor: kActiveLabelColor,
         labelStyle: TextStyle(
             fontWeight: FontWeight.w500, fontSize: 17, letterSpacing: 0.5),
       ),
