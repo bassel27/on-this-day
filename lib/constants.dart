@@ -21,7 +21,7 @@ NavBarDecoration kNavBarDecoration = NavBarDecoration(
 );
 const double kCalendarBorderRadius = 30;
 
-BoxDecoration kCalendarContainerDecoration = BoxDecoration(
+final BoxDecoration kCalendarContainerDecoration = BoxDecoration(
   borderRadius: const BorderRadius.all(
     Radius.circular(kCalendarBorderRadius),
   ),
@@ -31,7 +31,7 @@ BoxDecoration kCalendarContainerDecoration = BoxDecoration(
   ),
 );
 
-TextStyle kCalendarElementsTextStyle =
+const TextStyle kCalendarElementsTextStyle =
     const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w700);
 
 var kDatePickerStyles = DatePickerStyles(
