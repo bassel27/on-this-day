@@ -27,7 +27,7 @@ class _dialogContentState extends State<dialogContent> {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Text(
+                child: const Text(
                   "Cancel",
                 ),
               ),
@@ -37,7 +37,7 @@ class _dialogContentState extends State<dialogContent> {
                     _isMonthVisible = false;
                   });
                 },
-                child: Text(
+                child: const Text(
                   "Ok",
                 ),
               ),

@@ -11,7 +11,7 @@ class CalendarIconButton extends StatelessWidget {
             context: context,
             builder: (BuildContext context) {
               return AlertDialog(
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(kCalendarBorderRadius),
                     ),
@@ -20,7 +20,7 @@ class CalendarIconButton extends StatelessWidget {
                   content: dialogContent());
             });
       },
-      icon: Icon(Icons.calendar_month),
+      icon: const Icon(Icons.calendar_month),
     );
   }
 }

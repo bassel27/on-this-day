@@ -9,10 +9,10 @@ class InfoDisplayScreen extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(200.0),
+          preferredSize: const Size.fromHeight(200.0),
           child: Container(
             color: Theme.of(context).primaryColorDark,
-            child: TabBar(
+            child: const TabBar(
               indicatorColor: kTabBarIndicatorColor,
               tabs: <Tab>[
                 Tab(text: "Births"),
@@ -23,7 +23,7 @@ class InfoDisplayScreen extends StatelessWidget {
           ),
         ),
         body: TabBarView(
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           children: [
             InfoCardsStack(["Birth1", "Birth2"]),
             InfoCardsStack(["Event1", "Event2"]),

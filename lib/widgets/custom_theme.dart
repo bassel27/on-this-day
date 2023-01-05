@@ -7,7 +7,7 @@ class CustomTheme {
       fontFamily: 'Mulish-Italic-VariableFont_wght',
       primarySwatch: Colors
           .red, // some flutter widgets use shades o a color, this makes the shades available
-      textTheme: TextTheme(
+      textTheme: const TextTheme(
         bodyText2: TextStyle(fontWeight: FontWeight.w500),
         button: TextStyle(
             fontWeight: FontWeight.w700,
@@ -18,10 +18,10 @@ class CustomTheme {
             letterSpacing: 0.5,
             fontWeight: FontWeight.w600),
       ),
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         backgroundColor: kAppBarColor,
       ),
-      tabBarTheme: TabBarTheme(
+      tabBarTheme: const TabBarTheme(
         unselectedLabelColor: kUnselectedLabelColor,
         labelColor: kSelectedLabelColor,
         labelStyle: TextStyle(

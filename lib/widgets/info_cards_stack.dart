@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'swipeable_info_card.dart';
 import 'package:appinio_swiper/appinio_swiper.dart';
-import 'package:flutter/cupertino.dart';
 
 // Note that this package removes last element form the array with each swipe
 
@@ -22,12 +21,13 @@ class InfoCardsStack extends StatelessWidget {
         Expanded(
           child: AppinioSwiper(
             maxAngle: 45,
+            // ignore: prefer_const_constructors
             padding: EdgeInsets.fromLTRB(6, 6, 6, 15),
             cards: _swipeableCards,
-            duration: Duration(milliseconds: 150),
+            duration: const Duration(milliseconds: 150),
           ),
         ),
-        SizedBox(
+        const SizedBox(
             height:
                 kBottomNavigationBarHeight - kBottomNavigationBarHeight * 0.2),
       ],

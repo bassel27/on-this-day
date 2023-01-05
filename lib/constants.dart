@@ -14,15 +14,15 @@ const Color kNavBarColor = kDarkRedColor;
 const Color kUnselectedLabelColor = kPinkColor;
 const Color kSelectedLabelColor = Colors.white;
 NavBarDecoration kNavBarDecoration = NavBarDecoration(
-  border: Border.all(color: Color.fromARGB(255, 187, 7, 7), width: 3),
-  borderRadius: BorderRadius.only(
+  border: Border.all(color: const Color.fromARGB(255, 187, 7, 7), width: 3),
+  borderRadius: const BorderRadius.only(
       topLeft: Radius.circular(30), topRight: Radius.circular(30)),
-  colorBehindNavBar: Color.fromARGB(255, 0, 0, 0),
+  colorBehindNavBar: const Color.fromARGB(255, 0, 0, 0),
 );
 const double kCalendarBorderRadius = 30;
 
 BoxDecoration kCalendarContainerDecoration = BoxDecoration(
-  borderRadius: BorderRadius.all(
+  borderRadius: const BorderRadius.all(
     Radius.circular(kCalendarBorderRadius),
   ),
   border: Border.all(
@@ -32,22 +32,22 @@ BoxDecoration kCalendarContainerDecoration = BoxDecoration(
 );
 
 TextStyle kCalendarElementsTextStyle =
-    TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w700);
+    const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w700);
 
 var kDatePickerStyles = DatePickerStyles(
   displayedPeriodTitle: kCalendarElementsTextStyle.copyWith(fontSize: 18),
   currentDateStyle: kCalendarElementsTextStyle,
   selectedDateStyle: kCalendarElementsTextStyle.copyWith(color: Colors.red),
   defaultDateTextStyle: kCalendarElementsTextStyle,
-  nextIcon: Icon(
+  nextIcon: const Icon(
     Icons.join_right,
     color: kDarkRedColor,
   ),
-  prevIcon: Icon(
+  prevIcon: const Icon(
     Icons.join_right,
     color: kDarkRedColor,
   ),
-  selectedSingleDateDecoration: BoxDecoration(
+  selectedSingleDateDecoration: const BoxDecoration(
     color: Colors.white,
     borderRadius: BorderRadius.all(
       Radius.circular(15),
@@ -64,20 +64,17 @@ DatePickerRangeStyles kDatePickerRangeStyles = DatePickerRangeStyles(
   currentDateStyle: kCalendarElementsTextStyle,
   selectedDateStyle: kCalendarElementsTextStyle.copyWith(color: Colors.red),
   defaultDateTextStyle: kCalendarElementsTextStyle,
-  nextIcon: Icon(
+  nextIcon: const Icon(
     Icons.join_right,
     color: kDarkRedColor,
   ),
-  prevIcon: Icon(
+  prevIcon: const Icon(
     Icons.join_right,
     color: kDarkRedColor,
   ),
-  selectedSingleDateDecoration: BoxDecoration(
+  selectedSingleDateDecoration: const BoxDecoration(
     color: Colors.white,
     shape: BoxShape.circle,
-    // borderRadius: BorderRadius.all(
-    //   Radius.circular(30),
-    // ),
   ),
 );
 

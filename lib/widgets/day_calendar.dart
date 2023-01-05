@@ -3,7 +3,6 @@ import 'package:flutter_date_pickers/flutter_date_pickers.dart';
 import '../providers/selected_date.dart';
 import 'package:provider/provider.dart';
 import 'package:on_this_day/constants.dart';
-import 'package:on_this_day/constants.dart';
 
 class DayCalendar extends StatefulWidget {
   @override
@@ -17,7 +16,6 @@ class _DayCalendarState extends State<DayCalendar> {
         context.read<SelectedDate>().day = pickedDate;
       },
     );
-    print(context.watch<SelectedDate>().selectedDate);
   }
 
   @override

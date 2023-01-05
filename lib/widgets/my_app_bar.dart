@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:on_this_day/widgets/dialog_content.dart';
 import '../providers/selected_date.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
-import 'package:on_this_day/constants.dart';
 import 'calendar_icon_button.dart';
 
 class MyAppBar extends StatelessWidget with PreferredSizeWidget {
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
   @override
   Widget build(BuildContext context) {
     var appBarTextStyle = Theme.of(context).textTheme.headline6;
@@ -18,7 +16,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
         text: TextSpan(
           style: appBarTextStyle,
           children: [
-            TextSpan(
+            const TextSpan(
               text: "On ",
             ),
             TextSpan(

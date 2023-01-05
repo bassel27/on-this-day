@@ -10,9 +10,9 @@ class SwipeableInfoCard extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: Colors.white,
-        border: Border.all(color: Color(0XFFBDBDBD), width: 3),
+        border: Border.all(color: const Color(0XFFBDBDBD), width: 3),
         boxShadow: [
-          BoxShadow(
+          const BoxShadow(
             color: Color(0xFF757575),
             blurRadius: 4,
             offset: Offset(0, 0), // Shadow position
@@ -20,7 +20,7 @@ class SwipeableInfoCard extends StatelessWidget {
         ],
       ),
       child: Padding(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         child: Column(
           children: [
             Expanded(

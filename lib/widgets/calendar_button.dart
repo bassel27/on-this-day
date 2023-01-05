@@ -17,7 +17,7 @@ class CalendarButton extends StatelessWidget {
           backgroundColor: Colors.white,
           minimumSize: Size.zero, // Set this
           padding:
-              EdgeInsets.symmetric(vertical: 10, horizontal: 13), // and this
+              const EdgeInsets.symmetric(vertical: 10, horizontal: 13), // and this
         ),
       ),
     );

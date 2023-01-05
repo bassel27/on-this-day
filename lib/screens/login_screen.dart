@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class LoginScreen extends StatelessWidget {
   final TextEditingController _usernameController = TextEditingController();
@@ -12,20 +9,20 @@ class LoginScreen extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("On This Day"),
+          title: const Text("On This Day"),
         ),
         body: Container(
-          padding: EdgeInsets.symmetric(horizontal: 50),
+          padding: const EdgeInsets.symmetric(horizontal: 50),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextField(
-                decoration: InputDecoration(labelText: "Username"),
+                decoration: const InputDecoration(labelText: "Username"),
                 controller: _usernameController,
                 keyboardType: TextInputType.emailAddress,
               ),
               TextField(
-                decoration: InputDecoration(labelText: "Password"),
+                decoration: const InputDecoration(labelText: "Password"),
                 controller: _passwordController,
               ),
               ElevatedButton(
@@ -33,7 +30,7 @@ class LoginScreen extends StatelessWidget {
                   print(_usernameController.text);
                   print(_passwordController.text);
                 },
-                child: Text("Login"),
+                child: const Text("Login"),
               ),
             ],
           ),

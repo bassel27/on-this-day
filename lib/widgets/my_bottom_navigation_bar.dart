@@ -16,19 +16,19 @@ class MyBottomNavigationBar extends StatelessWidget {
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.home),
+        icon: const Icon(Icons.home),
         title: ("Home"),
         activeColorPrimary: kSelectedLabelColor,
         inactiveColorPrimary: kUnselectedLabelColor,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.favorite),
+        icon: const Icon(Icons.favorite),
         title: ("Favorites"),
         activeColorPrimary: kSelectedLabelColor,
         inactiveColorPrimary: kUnselectedLabelColor,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.settings),
+        icon: const Icon(Icons.settings),
         title: ("Settings"),
         activeColorPrimary: kSelectedLabelColor,
         inactiveColorPrimary: kUnselectedLabelColor,
@@ -51,12 +51,12 @@ class MyBottomNavigationBar extends StatelessWidget {
         decoration: kNavBarDecoration,
         popAllScreensOnTapOfSelectedTab: true,
         popActionScreens: PopActionScreensType.all,
-        itemAnimationProperties: ItemAnimationProperties(
+        itemAnimationProperties: const ItemAnimationProperties(
           // Navigation Bar's items animation properties.
           duration: Duration(milliseconds: 200),
           curve: Curves.ease,
         ),
-        screenTransitionAnimation: ScreenTransitionAnimation(
+        screenTransitionAnimation: const ScreenTransitionAnimation(
           // Screen transition animation on change of selected tab.
           animateTabTransition: true,
           curve: Curves.ease,
