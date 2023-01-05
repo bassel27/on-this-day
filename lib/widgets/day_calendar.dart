@@ -23,7 +23,7 @@ class _DayCalendarState extends State<DayCalendar> {
     return DayPicker.single(
       datePickerStyles: kDatePickerRangeStyles,
       datePickerLayoutSettings: kDatePickerLayoutSettings,
-      selectedDate: context.watch<SelectedDate>().selectedDate,
+      selectedDate: context.watch<SelectedDate>().probableDate,
       onChanged: onDayChange,
       firstDate: DateTime(DateTime.now().year, 1),
       lastDate: DateTime(DateTime.now().year, 12, 31),

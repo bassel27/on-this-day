@@ -2,17 +2,25 @@ import 'package:flutter/material.dart';
 
 class SelectedDate with ChangeNotifier {
   DateTime _selectedDate = DateTime.now();
-
+  late DateTime _probableDate = DateTime.now();
   DateTime get selectedDate => _selectedDate;
+  DateTime get probableDate => _probableDate;
 
-  void set selectedDate(DateTime newDate) {
-    _selectedDate = newDate;
-    notifyListeners();
+  /// The date isn't final if the user presses cancel or until the user presses ok.
+  void set probableDate(DateTime newDate) {
+    _probableDate = newDate;
+    // notifyListeners();
   }
 
   void set day(newDateTime) {
-    _selectedDate =
-        DateTime.utc(_selectedDate.year, _selectedDate.month, newDateTime.day);
+    _probableDate =
+        DateTime.utc(_probableDate.year, _probableDate.month, newDateTime.day);
+    // notifyListeners();
+  }
+
+  /// Notifies listeners (appBar) to update date
+  void updateAppBar() {
+    _selectedDate = _probableDate;
     notifyListeners();
   }
 }
