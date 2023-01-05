@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:on_this_day/constants.dart';
-import '../widgets/info_cards_stack.dart';
+import 'package:on_this_day/components/constants.dart';
+import './components/info_cards_stack.dart';
 
 class InfoDisplayScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
+      initialIndex: 1,
       length: 3,
       child: Scaffold(
         appBar: PreferredSize(

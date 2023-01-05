@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:on_this_day/constants.dart';
+import 'package:on_this_day/components/constants.dart';
 
 class CalendarContainer extends StatelessWidget {
   final Widget child;

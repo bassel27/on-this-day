@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:on_this_day/constants.dart';
-import 'dialog_content.dart';
+import 'package:on_this_day/components/constants.dart';
+import '../../dialog_screen/components/dialog_content.dart';
 
 class CalendarIconButton extends StatelessWidget {
   @override

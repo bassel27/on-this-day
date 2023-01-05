@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:on_this_day/screens/info_display_screen.dart';
-import '../constants.dart';
+import 'package:on_this_day/screens/info_display_screen/info_display_screen.dart';
+import '../../components/constants.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
-import '../screens/settings_screen.dart';
-import 'my_app_bar.dart';
+import '../settings_screen/settings_screen.dart';
+import 'components/my_app_bar.dart';
 
 class MyBottomNavigationBar extends StatelessWidget {
   final PersistentTabController _controller =

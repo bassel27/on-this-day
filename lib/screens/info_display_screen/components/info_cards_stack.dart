@@ -11,7 +11,7 @@ class InfoCardsStack extends StatelessWidget {
     for (String info in infoList) {
       _swipeableCards.add(SwipeableInfoCard(info));
     }
-    _swipeableCards.shuffle();
+    // _swipeableCards.shuffle();
   }
 
   @override
