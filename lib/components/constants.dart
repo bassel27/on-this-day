@@ -7,18 +7,22 @@ const Color kLightGreyColor = Color(0xFFBDBDBD);
 const Color kGreyColor = Color(0xFF757575);
 const Color kPinkColor = Color(0xFFFFCDD2);
 const Color kRedColor = Color(0xFFF44336);
-const Color kAppBarColor = kDarkRedColor;
-const Color kTabBarColor = kDarkRedColor;
+
+const Color kBarsColor = kRedColor;
+const Color kAppBarColor = kBarsColor;
+const Color kTabBarColor = kBarsColor;
+const Color kBottomNavBarColor = kBarsColor;
+
 const Color kTabBarIndicatorColor = kActiveLabelColor;
-const Color kNavBarColor = kDarkRedColor;
+
 const Color kInactiveLabelColor = kPinkColor;
 const Color kActiveLabelColor = Colors.white;
 NavBarDecoration kNavBarDecoration = NavBarDecoration(
-  border: Border.all(color: const Color.fromARGB(255, 187, 7, 7), width: 3),
-  borderRadius: const BorderRadius.only(
-      topLeft: Radius.circular(30), topRight: Radius.circular(30)),
-  colorBehindNavBar: const Color.fromARGB(255, 0, 0, 0),
-);
+    // border: Border.all(color: const Color.fromARGB(255, 187, 7, 7), width: 3),
+    // borderRadius: const BorderRadius.only(
+    //     topLeft: Radius.circular(30), topRight: Radius.circular(30)),
+    // colorBehindNavBar: const Color.fromARGB(255, 0, 0, 0),
+    );
 const double kCalendarBorderRadius = 30;
 
 final BoxDecoration kCalendarContainerDecoration = BoxDecoration(

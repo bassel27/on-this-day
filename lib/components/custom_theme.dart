@@ -27,7 +27,6 @@ class CustomTheme {
         labelStyle: TextStyle(
             fontWeight: FontWeight.w500, fontSize: 17, letterSpacing: 0.5),
       ),
-      scaffoldBackgroundColor: Colors.white,
     );
   }
 

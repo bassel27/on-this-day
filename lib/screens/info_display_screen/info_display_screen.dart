@@ -12,7 +12,7 @@ class InfoDisplayScreen extends StatelessWidget {
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(200.0),
           child: Container(
-            color: Theme.of(context).primaryColorDark,
+            color: kTabBarColor,
             child: const TabBar(
               indicatorColor: kTabBarIndicatorColor,
               tabs: <Tab>[

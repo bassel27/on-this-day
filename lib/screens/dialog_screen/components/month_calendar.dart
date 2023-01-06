@@ -32,7 +32,6 @@ class _MonthCalendarState extends State<MonthCalendar> {
 
   @override
   Widget build(BuildContext context) {
-    print(MediaQuery.of(context).size.width);
     return FittedBox(
       child: MonthPicker.single(
         datePickerStyles: kDatePickerStyles,
