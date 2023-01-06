@@ -78,11 +78,10 @@ final DatePickerRangeStyles kDatePickerRangeStyles = DatePickerRangeStyles(
   ),
 );
 
+var kScreenHeightToMaxDayPickerRowCount = {1440: 5};
+
 const DatePickerLayoutSettings kDatePickerLayoutSettings =
     DatePickerLayoutSettings(
   scrollPhysics: NeverScrollableScrollPhysics(),
-  //TODO
   dayPickerRowHeight: 35,
 );
-
-var kScreenHeightToMaxDayPickerRowCount = {1440: 5};

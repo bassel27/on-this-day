@@ -20,13 +20,15 @@ class _DayCalendarState extends State<DayCalendar> {
 
   @override
   Widget build(BuildContext context) {
-    return DayPicker.single(
-      datePickerStyles: kDatePickerRangeStyles,
-      datePickerLayoutSettings: kDatePickerLayoutSettings,
-      selectedDate: context.watch<SelectedDate>().probableDate,
-      onChanged: onDayChange,
-      firstDate: DateTime(DateTime.now().year, 1),
-      lastDate: DateTime(DateTime.now().year, 12, 31),
+    return FittedBox(
+      child: DayPicker.single(
+        datePickerStyles: kDatePickerRangeStyles,
+        datePickerLayoutSettings: kDatePickerLayoutSettings,
+        selectedDate: context.watch<SelectedDate>().probableDate,
+        onChanged: onDayChange,
+        firstDate: DateTime(DateTime.now().year, 1),
+        lastDate: DateTime(DateTime.now().year, 12, 31),
+      ),
     );
   }
 }
