@@ -4,7 +4,7 @@ class CalendarButton extends StatelessWidget {
   final VoidCallback onPressed;
   final Widget child;
 
-  CalendarButton({required this.child, required this.onPressed});
+  const CalendarButton({required this.child, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {

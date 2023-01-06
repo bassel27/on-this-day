@@ -3,7 +3,7 @@ import 'package:on_this_day/components/constants.dart';
 
 class CalendarContainer extends StatelessWidget {
   final Widget child;
-  CalendarContainer({required this.child});
+  const CalendarContainer({required this.child});
   @override
   Widget build(BuildContext context) {
     return Container(

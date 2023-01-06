@@ -7,6 +7,7 @@ import 'package:appinio_swiper/appinio_swiper.dart';
 class InfoCardsStack extends StatelessWidget {
   final List<SwipeableInfoCard> _swipeableCards = [];
   final List<String> infoList;
+  //TODO: remove logic from constructor
   InfoCardsStack(this.infoList) {
     for (String info in infoList) {
       _swipeableCards.add(SwipeableInfoCard(info));

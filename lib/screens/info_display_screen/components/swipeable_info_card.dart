@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class SwipeableInfoCard extends StatelessWidget {
   final String _information;
 
-  SwipeableInfoCard(this._information);
+  const SwipeableInfoCard(this._information);
   @override
   Widget build(BuildContext context) {
     return Container(
