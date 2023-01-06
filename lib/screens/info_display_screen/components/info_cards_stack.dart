@@ -8,12 +8,7 @@ class InfoCardsStack extends StatelessWidget {
   final List<SwipeableInfoCard> _swipeableCards = [];
   final List<String> infoList;
   //TODO: remove logic from constructor
-  InfoCardsStack(this.infoList) {
-    for (String info in infoList) {
-      _swipeableCards.add(SwipeableInfoCard(info));
-    }
-    // _swipeableCards.shuffle();
-  }
+  InfoCardsStack(this.infoList);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +19,11 @@ class InfoCardsStack extends StatelessWidget {
             maxAngle: 45,
             // ignore: prefer_const_constructors
             padding: EdgeInsets.fromLTRB(6, 6, 6, 15),
-            cards: _swipeableCards,
+            cards: infoList.map(
+              (info) {
+                return SwipeableInfoCard(info);
+              },
+            ).toList(),
             duration: const Duration(milliseconds: 150),
           ),
         ),
