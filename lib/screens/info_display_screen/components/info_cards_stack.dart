@@ -12,8 +12,6 @@ class InfoCardsStack extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
-
     return AppinioSwiper(
       maxAngle: 45,
       // ignore: prefer_const_constructors
