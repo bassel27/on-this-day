@@ -26,10 +26,14 @@ const double kCalendarBorderRadius = 30;
 const TextStyle kCalendarElementsTextStyle = const TextStyle(
     color: Colors.white, fontSize: 16, fontWeight: FontWeight.w700);
 
-
-
 const DatePickerLayoutSettings kDatePickerLayoutSettings =
     DatePickerLayoutSettings(
   scrollPhysics: NeverScrollableScrollPhysics(),
   dayPickerRowHeight: 35,
 );
+
+enum CurrentScreenByNavBar {
+  HomeInfoDisplayScreen,
+  FavoritesInfoDisplayScreen,
+  SettingsScreen,
+}
