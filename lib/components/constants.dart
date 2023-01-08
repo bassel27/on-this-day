@@ -2,87 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:flutter_date_pickers/flutter_date_pickers.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
+const Color kPrimaryColor = Colors.white;
+const Color kPrimaryColor2 = Color(0xFFB7CFDC);
+const Color kSecondaryColor = Color(0xFF05445E);
+const Color kAccentColor = Color(0xFF75E6DA);
+
 const Color kDarkRedColor = Color(0xFFD32F2F);
 const Color kLightGreyColor = Color(0xFFBDBDBD);
 const Color kGreyColor = Color(0xFF757575);
 const Color kPinkColor = Color(0xFFFFCDD2);
 const Color kRedColor = Color(0xFFF44336);
 
-const Color kBarsColor = kRedColor;
+const Color kBarsColor = kSecondaryColor;
 const Color kAppBarColor = kBarsColor;
 const Color kTabBarColor = kBarsColor;
 const Color kBottomNavBarColor = kBarsColor;
 
-const Color kTabBarIndicatorColor = kActiveLabelColor;
+const Color kActiveLabelColor = kAccentColor;
+const Color kInactiveLabelColor = kPrimaryColor;
 
-const Color kInactiveLabelColor = kPinkColor;
-const Color kActiveLabelColor = Colors.white;
-NavBarDecoration kNavBarDecoration = NavBarDecoration(
-    // border: Border.all(color: const Color.fromARGB(255, 187, 7, 7), width: 3),
-    // borderRadius: const BorderRadius.only(
-    //     topLeft: Radius.circular(30), topRight: Radius.circular(30)),
-    // colorBehindNavBar: const Color.fromARGB(255, 0, 0, 0),
-    );
 const double kCalendarBorderRadius = 30;
-
-final BoxDecoration kCalendarContainerDecoration = BoxDecoration(
-  borderRadius: const BorderRadius.all(
-    Radius.circular(kCalendarBorderRadius),
-  ),
-  border: Border.all(
-    width: 2,
-    color: Colors.white,
-  ),
-);
 
 const TextStyle kCalendarElementsTextStyle = const TextStyle(
     color: Colors.white, fontSize: 16, fontWeight: FontWeight.w700);
 
-final DatePickerStyles kDatePickerStyles = DatePickerStyles(
-  displayedPeriodTitle: kCalendarElementsTextStyle.copyWith(fontSize: 18),
-  currentDateStyle: kCalendarElementsTextStyle,
-  selectedDateStyle: kCalendarElementsTextStyle.copyWith(color: Colors.red),
-  defaultDateTextStyle: kCalendarElementsTextStyle,
-  nextIcon: const Icon(
-    Icons.join_right,
-    color: kDarkRedColor,
-  ),
-  prevIcon: const Icon(
-    Icons.join_right,
-    color: kDarkRedColor,
-  ),
-  selectedSingleDateDecoration: const BoxDecoration(
-    color: Colors.white,
-    borderRadius: BorderRadius.all(
-      Radius.circular(15),
-    ),
-  ),
-);
 
-final DatePickerRangeStyles kDatePickerRangeStyles = DatePickerRangeStyles(
-  displayedPeriodTitle: kCalendarElementsTextStyle.copyWith(fontSize: 18),
-  dayHeaderStyle: DayHeaderStyle(
-    textStyle: kCalendarElementsTextStyle.copyWith(
-        fontWeight: FontWeight.w300, fontSize: 14),
-  ),
-  currentDateStyle: kCalendarElementsTextStyle,
-  selectedDateStyle: kCalendarElementsTextStyle.copyWith(color: Colors.red),
-  defaultDateTextStyle: kCalendarElementsTextStyle,
-  nextIcon: const Icon(
-    Icons.join_right,
-    color: kDarkRedColor,
-  ),
-  prevIcon: const Icon(
-    Icons.join_right,
-    color: kDarkRedColor,
-  ),
-  selectedSingleDateDecoration: const BoxDecoration(
-    color: Colors.white,
-    shape: BoxShape.circle,
-  ),
-);
-
-var kScreenHeightToMaxDayPickerRowCount = {1440: 5};
 
 const DatePickerLayoutSettings kDatePickerLayoutSettings =
     DatePickerLayoutSettings(

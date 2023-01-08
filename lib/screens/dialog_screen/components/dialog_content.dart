@@ -35,13 +35,15 @@ class _dialogContentState extends State<dialogContent> {
               children: [
                 CalendarButton(
                   onPressed: closeDialog,
-                  child: const Text(
+                  child: Text(
                     "Cancel",
+                    style: Theme.of(context).textTheme.button,
                   ),
                 ),
                 CalendarButton(
-                  child: const Text(
+                  child: Text(
                     "Ok",
+                    style: Theme.of(context).textTheme.button,
                   ),
                   onPressed: () {
                     if (_isMonthVisible) {

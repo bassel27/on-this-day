@@ -5,13 +5,12 @@ class CustomTheme {
   static ThemeData get lightTheme {
     return ThemeData(
       fontFamily: 'Mulish-Italic-VariableFont_wght',
-      primarySwatch: Colors
-          .red, // some flutter widgets use shades o a color, this makes the shades available
       textTheme: const TextTheme(
         bodyText2: TextStyle(fontWeight: FontWeight.w500),
         button: TextStyle(
-            fontWeight: FontWeight.w700,
-            color: Colors.red), // affects card text
+          fontWeight: FontWeight.w600,
+          color: kSecondaryColor,
+        ), // affects card text
         headline6: TextStyle(
             color: Colors.white,
             fontSize: 25,
@@ -21,6 +20,15 @@ class CustomTheme {
       appBarTheme: const AppBarTheme(
         backgroundColor: kAppBarColor,
       ),
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          backgroundColor: kAccentColor,
+        ),
+      ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+          style: OutlinedButton.styleFrom(
+        backgroundColor: kAccentColor,
+      )),
       tabBarTheme: const TabBarTheme(
         unselectedLabelColor: kInactiveLabelColor,
         labelColor: kActiveLabelColor,

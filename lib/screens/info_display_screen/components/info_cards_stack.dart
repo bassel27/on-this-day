@@ -15,7 +15,7 @@ class InfoCardsStack extends StatelessWidget {
     return AppinioSwiper(
       maxAngle: 45,
       // ignore: prefer_const_constructors
-      padding: EdgeInsets.fromLTRB(6, 6, 6, 15),
+      padding: EdgeInsets.fromLTRB(8, 6, 8, 15),
       cards: infoList.map(
         (info) {
           return InfoCard(info);

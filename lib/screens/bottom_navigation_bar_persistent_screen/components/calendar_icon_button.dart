@@ -20,7 +20,10 @@ class CalendarIconButton extends StatelessWidget {
                   content: dialogContent());
             });
       },
-      icon: const Icon(Icons.calendar_month),
+      icon: const Icon(
+        Icons.calendar_month,
+        color: kAccentColor,
+      ),
     );
   }
 }

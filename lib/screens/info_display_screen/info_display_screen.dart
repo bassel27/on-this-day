@@ -3,6 +3,21 @@ import 'package:on_this_day/components/constants.dart';
 import './components/info_cards_stack.dart';
 
 class InfoDisplayScreen extends StatelessWidget {
+  final TabBarView scaffoldBody = TabBarView(
+    physics: const NeverScrollableScrollPhysics(),
+    children: [
+      InfoCardsStack(["Birth1", "Birth2"]),
+      InfoCardsStack(["Event1", "Event2"]),
+      InfoCardsStack(["Death1", "Death2"]),
+    ],
+  );
+
+  List<Tab> tabsList = [
+    const Tab(text: "Births"),
+    const Tab(text: "Events"),
+    const Tab(text: "Deaths"),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -13,24 +28,14 @@ class InfoDisplayScreen extends StatelessWidget {
           preferredSize: const Size.fromHeight(200.0),
           child: Container(
             color: kTabBarColor,
-            child: const TabBar(
-              indicatorColor: kTabBarIndicatorColor,
-              tabs: <Tab>[
-                Tab(text: "Births"),
-                Tab(text: "Events"),
-                Tab(text: "Deaths"),
-              ],
+            child: TabBar(
+              indicatorColor: kActiveLabelColor,
+              tabs: tabsList,
             ),
           ),
         ),
-        body: TabBarView(
-          physics: const NeverScrollableScrollPhysics(),
-          children: [
-            InfoCardsStack(["Birth1", "Birth2"]),
-            InfoCardsStack(["Event1", "Event2"]),
-            InfoCardsStack(["Death1", "Death2"]),
-          ],
-        ),
+        backgroundColor: kPrimaryColor2,
+        body: scaffoldBody,
       ),
     );
   }

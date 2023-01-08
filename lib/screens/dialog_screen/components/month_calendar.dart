@@ -10,24 +10,34 @@ class MonthCalendar extends StatefulWidget {
 }
 
 class _MonthCalendarState extends State<MonthCalendar> {
+  DatePickerStyles kDatePickerStyles = DatePickerStyles(
+    displayedPeriodTitle: kCalendarElementsTextStyle.copyWith(fontSize: 18),
+    currentDateStyle: kCalendarElementsTextStyle,
+    selectedDateStyle:
+        kCalendarElementsTextStyle.copyWith(color: kSecondaryColor),
+    defaultDateTextStyle: kCalendarElementsTextStyle,
+    nextIcon: const Icon(
+      Icons.join_right,
+      color: kSecondaryColor,
+    ),
+    prevIcon: const Icon(
+      Icons.join_right,
+      color: kSecondaryColor,
+    ),
+    selectedSingleDateDecoration: const BoxDecoration(
+      color: kAccentColor,
+      borderRadius: BorderRadius.all(
+        Radius.circular(15),
+      ),
+    ),
+  );
+
   void onMonthChange(DateTime pickedDate) {
     setState(
       () {
         context.read<SelectedDate>().probableDate = pickedDate;
       },
     );
-  }
-
-  int getMaxDayPickerRowCount(screenHeight) {
-    if (screenHeight > 400) {
-      return 5;
-    } else if (screenHeight > 300) {
-      return 3;
-    } else if (screenHeight > 250) {
-      return 2;
-    } else {
-      return 1;
-    }
   }
 
   @override

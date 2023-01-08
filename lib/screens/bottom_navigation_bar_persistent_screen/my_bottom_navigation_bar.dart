@@ -5,7 +5,7 @@ import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import '../settings_screen/settings_screen.dart';
 import 'components/my_app_bar.dart';
 
-class MyBottomNavigationBar extends StatelessWidget {
+class BottomNavigationBarPersistentScreen extends StatelessWidget {
   final PersistentTabController _controller =
       PersistentTabController(initialIndex: 1);
 
@@ -40,14 +40,13 @@ class MyBottomNavigationBar extends StatelessWidget {
     ];
   }
 
-  PersistentTabView a7a(context) {
+  PersistentTabView MyPersistentTabView(context) {
     return PersistentTabView(
       context,
       controller: _controller,
       screens: _buildScreens(),
       items: _navBarsItems(),
       backgroundColor: kBottomNavBarColor,
-      decoration: kNavBarDecoration,
       popActionScreens: PopActionScreensType.all,
       itemAnimationProperties: const ItemAnimationProperties(
         // Navigation Bar's items animation properties.
@@ -70,7 +69,7 @@ class MyBottomNavigationBar extends StatelessWidget {
     return Scaffold(
       appBar: MyAppBar(),
       body: Container(
-        child: a7a(context),
+        child: MyPersistentTabView(context),
       ),
     );
   }

@@ -7,6 +7,9 @@ import 'calendar_icon_button.dart';
 
 class MyAppBar extends StatelessWidget with PreferredSizeWidget {
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+  
+  
+  
   @override
   Widget build(BuildContext context) {
     var appBarTextStyle = Theme.of(context).textTheme.headline6;
@@ -20,6 +23,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
               text: "On ",
             ),
             TextSpan(
+              // TODO: Events/ deaths/ births on .... & favourites & settings
               text:
                   "${DateFormat('MM-dd').format((context.watch<SelectedDate>().selectedDate))}",
               style: appBarTextStyle!

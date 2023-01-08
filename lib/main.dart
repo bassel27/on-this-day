@@ -13,7 +13,7 @@ void main() => runApp(
         ],
         child: MaterialApp(
           title: "On this day",
-          home: MyBottomNavigationBar(),
+          home: BottomNavigationBarPersistentScreen(),
           theme: CustomTheme.lightTheme,
         ),
       ),

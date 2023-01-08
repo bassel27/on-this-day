@@ -10,6 +10,30 @@ class DayCalendar extends StatefulWidget {
 }
 
 class _DayCalendarState extends State<DayCalendar> {
+  final DatePickerRangeStyles kDatePickerRangeStyles = DatePickerRangeStyles(
+    displayedPeriodTitle: kCalendarElementsTextStyle.copyWith(fontSize: 18),
+    dayHeaderStyle: DayHeaderStyle(
+      textStyle: kCalendarElementsTextStyle.copyWith(
+          fontWeight: FontWeight.w300, fontSize: 14),
+    ),
+    currentDateStyle: kCalendarElementsTextStyle,
+    selectedDateStyle:
+        kCalendarElementsTextStyle.copyWith(color: kSecondaryColor),
+    defaultDateTextStyle: kCalendarElementsTextStyle,
+    nextIcon: const Icon(
+      Icons.join_right,
+      color: kSecondaryColor,
+    ),
+    prevIcon: const Icon(
+      Icons.join_right,
+      color: kSecondaryColor,
+    ),
+    selectedSingleDateDecoration: const BoxDecoration(
+      color: kAccentColor,
+      shape: BoxShape.circle,
+    ),
+  );
+
   void onDayChange(DateTime pickedDate) {
     setState(
       () {
