@@ -1,10 +1,8 @@
-import 'package:intl/intl.dart';
 import 'package:on_this_day/providers/app_bar_title.dart';
 import 'package:on_this_day/screens/info_display_screen/info_display_screen.dart';
 import '.../../../../../components/constants.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import '../../../components/app_bar_text_widget_home.dart';
-import '../../../providers/selected_date.dart';
 import '../../settings_screen/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -17,29 +15,20 @@ class MyPersistentTabView extends StatelessWidget {
   ];
 
   final List<PersistentBottomNavBarItem> _navBarsItems = [
-    PersistentBottomNavBarItem(
-      icon: const Icon(Icons.favorite),
-      activeColorPrimary: kActiveLabelColor,
-      inactiveColorPrimary: kInactiveLabelColor,
-    ),
-    PersistentBottomNavBarItem(
-        icon: const Icon(
-          Icons.home,
-          color: kActiveLabelColor,
-        ),
-        inactiveIcon: const Icon(
-          Icons.home,
-          color: kInactiveLabelColor,
-        ),
+    ...[
+      const Icon(Icons.favorite),
+      const Icon(Icons.home),
+      const Icon(Icons.settings),
+    ].map((icon) {
+      return PersistentBottomNavBarItem(
+        icon: icon,
         activeColorPrimary: kActiveLabelColor,
         inactiveColorPrimary: kInactiveLabelColor,
-        activeColorSecondary: Colors.amber),
-    PersistentBottomNavBarItem(
-      icon: const Icon(Icons.settings),
-      activeColorPrimary: kActiveLabelColor,
-      inactiveColorPrimary: kInactiveLabelColor,
-    ),
+      );
+    }).toList()
   ];
+
+  final int _animationDuration = 300;
 
   @override
   Widget build(BuildContext context) {
@@ -52,20 +41,14 @@ class MyPersistentTabView extends StatelessWidget {
       screens: _buildScreens,
       items: _navBarsItems,
       backgroundColor: kBottomNavBarColor,
-      popActionScreens: PopActionScreensType.all,
-      itemAnimationProperties: const ItemAnimationProperties(
-        // Navigation Bar's items animation properties.
-        duration: Duration(milliseconds: 200),
-        curve: Curves.ease,
+      itemAnimationProperties: ItemAnimationProperties(
+        duration: Duration(milliseconds: _animationDuration),
       ),
-      screenTransitionAnimation: const ScreenTransitionAnimation(
-        // Screen transition animation on change of selected tab.
+      screenTransitionAnimation: ScreenTransitionAnimation(
         animateTabTransition: true,
-        curve: Curves.ease,
-        duration: Duration(milliseconds: 200),
+        duration: Duration(milliseconds: _animationDuration),
       ),
-      navBarStyle:
-          NavBarStyle.style1, // Choose the nav bar style with this property.
+      navBarStyle: NavBarStyle.style1,
     );
   }
 
@@ -79,8 +62,6 @@ class MyPersistentTabView extends StatelessWidget {
         break;
       default:
         context.read<AppBarTitle>().widget = const Text("Settings");
-        break;
     }
   }
 }
-
