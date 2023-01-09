@@ -13,7 +13,7 @@ class CustomTheme {
         ), // affects card text
         headline6: TextStyle(
             color: Colors.white,
-            fontSize: 25,
+            fontSize: 25.0,
             letterSpacing: 0.5,
             fontWeight: FontWeight.w600),
       ),

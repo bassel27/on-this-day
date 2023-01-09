@@ -32,8 +32,3 @@ const DatePickerLayoutSettings kDatePickerLayoutSettings =
   dayPickerRowHeight: 35,
 );
 
-enum CurrentScreenByNavBar {
-  HomeInfoDisplayScreen,
-  FavoritesInfoDisplayScreen,
-  SettingsScreen,
-}
