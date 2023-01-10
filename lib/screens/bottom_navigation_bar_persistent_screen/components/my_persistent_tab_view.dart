@@ -40,7 +40,7 @@ class MyPersistentTabView extends StatelessWidget {
       },
       screens: _buildScreens,
       items: _navBarsItems,
-      backgroundColor: kBottomNavBarColor,
+      backgroundColor: kBarsColor,
       itemAnimationProperties: ItemAnimationProperties(
         duration: Duration(milliseconds: _animationDuration),
       ),

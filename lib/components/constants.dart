@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_date_pickers/flutter_date_pickers.dart';
-import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 const Color kPrimaryColor = Colors.white;
 const Color kPrimaryColor2 = Color(0xFFB7CFDC);
@@ -13,12 +12,13 @@ const Color kGreyColor = Color(0xFF757575);
 const Color kPinkColor = Color(0xFFFFCDD2);
 const Color kRedColor = Color(0xFFF44336);
 
+/// Controls navigation bar, tabbar and appba's color.
 const Color kBarsColor = kSecondaryColor;
-const Color kAppBarColor = kBarsColor;
-const Color kTabBarColor = kBarsColor;
-const Color kBottomNavBarColor = kBarsColor;
 
+/// Controls the active color of active label of tabbar and bottom navbar
 const Color kActiveLabelColor = kAccentColor;
+
+/// Controls the inactive color of active label of tabbar and bottom navbar
 const Color kInactiveLabelColor = kPrimaryColor;
 
 const double kCalendarBorderRadius = 30;
@@ -31,4 +31,3 @@ const DatePickerLayoutSettings kDatePickerLayoutSettings =
   scrollPhysics: NeverScrollableScrollPhysics(),
   dayPickerRowHeight: 35,
 );
-

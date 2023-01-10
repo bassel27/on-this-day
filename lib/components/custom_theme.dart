@@ -18,7 +18,7 @@ class CustomTheme {
             fontWeight: FontWeight.w600),
       ),
       appBarTheme: const AppBarTheme(
-        backgroundColor: kAppBarColor,
+        backgroundColor: kBarsColor,
       ),
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
@@ -33,7 +33,7 @@ class CustomTheme {
         unselectedLabelColor: kInactiveLabelColor,
         labelColor: kActiveLabelColor,
         labelStyle: TextStyle(
-            fontWeight: FontWeight.w500, fontSize: 17, letterSpacing: 0.5),
+            fontWeight: FontWeight.w500, fontSize: 19, letterSpacing: 0.5),
       ),
     );
   }
