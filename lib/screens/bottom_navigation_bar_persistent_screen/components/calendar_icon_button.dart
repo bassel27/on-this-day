@@ -8,17 +8,18 @@ class CalendarIconButton extends StatelessWidget {
     return IconButton(
       onPressed: () {
         showDialog(
-            context: context,
-            builder: (BuildContext context) {
-              return AlertDialog(
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(kCalendarBorderRadius),
-                    ),
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(kCalendarBorderRadius),
                   ),
-                  contentPadding: EdgeInsets.zero,
-                  content: dialogContent());
-            });
+                ),
+                contentPadding: EdgeInsets.zero,
+                content: dialogContent());
+          },
+        );
       },
       icon: const Icon(
         Icons.calendar_month,

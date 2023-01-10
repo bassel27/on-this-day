@@ -12,11 +12,9 @@ class InfoDisplayScreen extends StatelessWidget {
     ],
   );
 
-  List<Tab> tabsList = [
-    const Tab(text: "Births"),
-    const Tab(text: "Events"),
-    const Tab(text: "Deaths"),
-  ];
+  List<Tab> tabsList = ["Births", "Events", "Deaths"]
+      .map((textItem) => Tab(text: textItem))
+      .toList();
 
   @override
   Widget build(BuildContext context) {

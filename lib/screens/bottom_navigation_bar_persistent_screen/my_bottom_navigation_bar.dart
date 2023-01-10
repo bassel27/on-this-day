@@ -1,23 +1,20 @@
 import 'package:flutter/material.dart';
-import 'components/my_app_bar.dart';
-import 'package:provider/provider.dart';
-import '../../../providers/selected_date.dart';
-import 'package:intl/intl.dart';
 import './components/my_persistent_tab_view.dart';
+import 'package:on_this_day/providers/app_bar_title.dart';
+import './components/calendar_icon_button.dart';
+import 'package:provider/provider.dart';
 
-class BottomNavigationBarPersistentScreen extends StatefulWidget {
-  @override
-  State<BottomNavigationBarPersistentScreen> createState() =>
-      _BottomNavigationBarPersistentScreenState();
-}
-
-class _BottomNavigationBarPersistentScreenState
-    extends State<BottomNavigationBarPersistentScreen> {
-
+class BottomNavigationBarPersistentScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar(),
+      appBar: AppBar(
+        elevation: 0,
+        title: context.watch<AppBarTitle>().widget,
+        actions: [
+          CalendarIconButton(),
+        ],
+      ),
       body: Container(
         child: MyPersistentTabView(),
       ),

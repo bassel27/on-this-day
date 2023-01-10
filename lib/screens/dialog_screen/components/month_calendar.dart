@@ -10,6 +10,20 @@ class MonthCalendar extends StatefulWidget {
 }
 
 class _MonthCalendarState extends State<MonthCalendar> {
+  @override
+  Widget build(BuildContext context) {
+    return FittedBox(
+      child: MonthPicker.single(
+        datePickerStyles: kDatePickerStyles,
+        datePickerLayoutSettings: kDatePickerLayoutSettings,
+        selectedDate: context.watch<SelectedDate>().probableDate,
+        onChanged: onMonthChange,
+        firstDate: DateTime(DateTime.now().year, 1),
+        lastDate: DateTime(DateTime.now().year, 12, 31),
+      ),
+    );
+  }
+
   DatePickerStyles kDatePickerStyles = DatePickerStyles(
     displayedPeriodTitle: kCalendarElementsTextStyle.copyWith(fontSize: 18),
     currentDateStyle: kCalendarElementsTextStyle,
@@ -37,20 +51,6 @@ class _MonthCalendarState extends State<MonthCalendar> {
       () {
         context.read<SelectedDate>().probableDate = pickedDate;
       },
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return FittedBox(
-      child: MonthPicker.single(
-        datePickerStyles: kDatePickerStyles,
-        datePickerLayoutSettings: kDatePickerLayoutSettings,
-        selectedDate: context.watch<SelectedDate>().probableDate,
-        onChanged: onMonthChange,
-        firstDate: DateTime(DateTime.now().year, 1),
-        lastDate: DateTime(DateTime.now().year, 12, 31),
-      ),
     );
   }
 }
