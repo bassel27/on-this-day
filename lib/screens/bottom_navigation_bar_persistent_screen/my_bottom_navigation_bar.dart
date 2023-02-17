@@ -8,6 +8,7 @@ class BottomNavigationBarPersistentScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // TODO: show calendar button only on home screen
       appBar: AppBar(
         elevation: 0,
         title: context.watch<AppBarTitle>().widget,

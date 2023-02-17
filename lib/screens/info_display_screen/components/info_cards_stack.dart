@@ -5,9 +5,9 @@ import 'package:appinio_swiper/appinio_swiper.dart';
 // Note that this package removes last element form the array with each swipe
 
 class InfoCardsStack extends StatelessWidget {
-  final List<InfoCard> _swipeableCards = [];
+  
   final List<String> infoList;
-  //TODO: remove logic from constructor
+  
   InfoCardsStack(this.infoList);
 
   @override

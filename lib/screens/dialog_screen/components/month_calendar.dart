@@ -16,7 +16,7 @@ class _MonthCalendarState extends State<MonthCalendar> {
       child: MonthPicker.single(
         datePickerStyles: kDatePickerStyles,
         datePickerLayoutSettings: kDatePickerLayoutSettings,
-        selectedDate: context.watch<SelectedDate>().probableDate,
+        selectedDate: context.watch<SelectedDate>().possibleDate,
         onChanged: onMonthChange,
         firstDate: DateTime(DateTime.now().year, 1),
         lastDate: DateTime(DateTime.now().year, 12, 31),
@@ -49,7 +49,7 @@ class _MonthCalendarState extends State<MonthCalendar> {
   void onMonthChange(DateTime pickedDate) {
     setState(
       () {
-        context.read<SelectedDate>().probableDate = pickedDate;
+        context.read<SelectedDate>().possibleDate = pickedDate;
       },
     );
   }

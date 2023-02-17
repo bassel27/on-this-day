@@ -4,10 +4,10 @@ class SelectedDate with ChangeNotifier {
   DateTime _selectedDate = DateTime.now();
   late DateTime _probableDate = DateTime.now();
   DateTime get selectedDate => _selectedDate;
-  DateTime get probableDate => _probableDate;
+  DateTime get possibleDate => _probableDate;
 
   /// The date isn't final if the user presses cancel or until the user presses ok.
-  void set probableDate(DateTime newDate) {
+  void set possibleDate(DateTime newDate) {
     _probableDate = newDate;
     // notifyListeners();
   }
