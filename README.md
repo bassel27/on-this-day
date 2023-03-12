@@ -19,7 +19,6 @@ https://drive.google.com/file/d/1rHVPJleh5jGobuc0hkJs6SbAOoG2BrvW/view?usp=share
       <th>Home</th>
     </tr>
     <tr>
-      ![image]()
       <td><img src="https://user-images.githubusercontent.com/40627412/224576364-a4e1901e-61ac-4a10-9163-79d665f8b958.png" height="400"></td>
     </tr>
   </table>
