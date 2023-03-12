@@ -1,16 +1,26 @@
-# on_this_day
+# On This Day
+On This Day is a mobile application that shows historical events that happened on a certain day.
 
-A new Flutter project.
+## Features
+Displays historical events, births, and deaths that happened on a certain day.
+Allows you to mark events as favorites and view them on the favorites screen.
 
-## Getting Started
+## Backend
+Currently, the app is not connected to a backend and uses a local JSON file with historical events as a data source.
 
-This project is a starting point for a Flutter application.
+## App Demonstration Video
+https://drive.google.com/file/d/1rHVPJleh5jGobuc0hkJs6SbAOoG2BrvW/view?usp=share_link
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<div style="overflow-x:auto;">
+  <table style="height: 400px;">
+    <tr>
+      <th>Home</th>
+    </tr>
+    <tr>
+      ![image]()
+      <td><img src="https://user-images.githubusercontent.com/40627412/224576364-a4e1901e-61ac-4a10-9163-79d665f8b958.png" height="400"></td>
+    </tr>
+  </table>
+</div>
